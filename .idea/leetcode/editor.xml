@@ -3,6 +3,14 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[125]验证回文串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[125]验证回文串.java" />
+              <option name="questionId" value="125" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[141]环形链表.java">
           <value>
             <LeetcodeEditor>
@@ -16,6 +24,14 @@
             <LeetcodeEditor>
               <option name="path" value="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[21]合并两个有序链表.java" />
               <option name="questionId" value="21" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[26]删除排序数组中的重复项.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/fd/lv38dw712nb_gxzzn12ypygr0000gn/T/leetcode/editor/cn/[26]删除排序数组中的重复项.java" />
+              <option name="questionId" value="26" />
             </LeetcodeEditor>
           </value>
         </entry>
