@@ -21,25 +21,51 @@ package solution;
 
 public class s108 {
 
-    TreeNode root;
+    TreeNode rootx;
     int [] nums2;
 
 
-    void buildTree(int value){
+    void buildTreeLeft(TreeNode root, int min, int max){
+        if(min == max) {
+            root.left = new TreeNode(nums2[min]);
+        }else if (min < max){
+            root.left = new TreeNode(nums2[min + (max - min + 1) / 2]);
+            buildTreeLeft(root.left,min,min + (max - min + 1) / 2-1);
+            buildTreeRight(root.left,min + (max - min + 1) / 2+1, max);
+        }
+
+    }
+
+    void buildTreeRight(TreeNode root, int min, int max){
+        if(min == max) {
+            root.right = new TreeNode(nums2[min]);
+        }else if (min < max){
+            root.right = new TreeNode(nums2[min + (max - min + 1) / 2]);
+            buildTreeLeft(root.right,min,min + (max - min + 1) / 2-1);
+            buildTreeRight(root.right,min + (max - min + 1) / 2+1, max);
+        }
 
     }
 
 
+
     public TreeNode sortedArrayToBST(int[] nums) {
 
-        root = new TreeNode(nums[nums.length/2]);
+        //root = new TreeNode(nums[nums.length/2]);
 
         nums2 = nums;
 
+        if (nums.length != 0){
+            rootx = new TreeNode(nums[(nums.length)/2]);
+            buildTreeLeft(rootx,0, (nums.length)/2 - 1);
+            buildTreeRight(rootx,(nums.length)/2 + 1 , nums.length-1);
+        }
 
 
 
-        return root;
+
+
+        return rootx;
 
     }
 
@@ -52,6 +78,8 @@ public class s108 {
 
         int [] nums = {-10,-3,0,5,9};
         s108.sortedArrayToBST(nums);
+
+
     }
 
 }
