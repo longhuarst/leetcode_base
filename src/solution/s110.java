@@ -40,12 +40,59 @@ package solution;
 
 public class s110 {
 
-    public boolean isBalanced(TreeNode root) {
+    boolean flag = true;
+
+    int order(TreeNode root){
+        if (root == null)
+            return 0;
+
+        int hl = order(root.left); //左子树的高度
+        int hr = order(root.right);//右子树的高度
+
+        if (Math.abs(hl - hr) >= 2){
+            flag = false;
+        }
+
+        return Math.max(hl,hr) + 1;//当前结点的高度为 左右子树的高度较大者+1
 
     }
 
 
+    //左子树 与 右子树 高度之差不超过 + - 1
+    public boolean isBalanced(TreeNode root) {
+
+        order(root);
+
+        return flag;
+    }
+
+
     public static void main(String[] args) {
+        s110 s110 = new s110();
+
+        TreeNode root = new TreeNode(3);
+
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+
+        System.out.println(s110.isBalanced(root));
+
+
+
+        TreeNode root2;
+
+        root2 = BinaryTree.buildTree("[1,2,2,3,3,null,null,4,4]");
+
+        System.out.println(BinaryTree.LevelOrder(root2));
+
+
+        System.out.println(s110.isBalanced(root2));
+
+
+
 
         //
     }
