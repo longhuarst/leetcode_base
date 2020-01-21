@@ -48,6 +48,14 @@ public class BinaryTree {
             while(!queue.isEmpty()){
                 TreeNode cur = queue.remove();
 
+                if (cur == null){
+                    seq++;
+                    seq++;
+                    queue.add(null);
+                    queue.add(null);
+                    continue;
+                }
+
                 try {
                     cur.left = new TreeNode(Integer.valueOf(tar[seq++]));
                 }catch (Exception e){
